@@ -1,0 +1,20 @@
+syntax = "proto3"; // definde proto version
+package hello;     // defin depackage
+
+option go_package = "hello";
+
+// definde Hello service
+service Hello {
+    // definde SayHello function
+    rpc SayHello(HelloRequest) returns (HelloResponse) {}
+}
+
+// definde HelloRequest structure
+message HelloRequest {
+    string name = 1;
+}
+
+// definde HelloResponse structure
+message HelloResponse {
+    string message = 1;
+}
